@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 
 export default function TextForm(props) {
-    const handleUpClick =()=>{
+  // local states
+  const [text, setText] =useState('')
+   
+  const handleUpClick =()=>{
       console.log("Uppercase was clicked" + text);
       let newText = text.toUpperCase();
       setText(newText)
@@ -29,7 +32,7 @@ export default function TextForm(props) {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
     }
-    const [text, setText] =useState('');
+      
     return (
       <>
     <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
