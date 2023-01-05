@@ -1,5 +1,6 @@
 import React from 'react'
 //import PropTypes from 'prop-types'
+//import { Link } from 'react-router-dom';
 
 
 export default function Navbarr(props) {
@@ -16,7 +17,13 @@ export default function Navbarr(props) {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
+         </li>
+         {/*<li class="nav-item">*/}
+         {/*<a class="nav-link" href="#">About</a>*/}
+   
+   
+         {/*</li>*/}
+        
         <li className="nav-item">
           <a className="nav-link" href="/">{props.aboutText}</a>
         </li>
