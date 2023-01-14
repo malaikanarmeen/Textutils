@@ -20,7 +20,7 @@ export default class App extends Component {
         <NavBar/>
       
         <Switch>
-          <Route exact path="/"><News key="general"   pageSize={this.pageSize} country="ma" category="general"/></Route>
+          <Route exact path="/"><News key="general"   pageSize={this.pageSize} country="ma" category="General"/></Route>
           <Route exact path="/business"><News key="Business"  pageSize={this.pageSize} country="ma" category="Business"/></Route>
           <Route exact path="/entertainment"><News key="Entertainment"  pageSize={this.pageSize} country="ma" category="Entertainment"/></Route>
           <Route exact path="/general"><News key="General"  pageSize={this.pageSize} country="ma" category="General"/></Route>
