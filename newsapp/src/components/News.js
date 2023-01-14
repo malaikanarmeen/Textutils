@@ -17,14 +17,15 @@ export class News extends Component {
     category: PropTypes.string,
 
   }
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       articles: [],
       loading: false,
       page:1
 
     }
+    document.title = `${this.props.category} - NewsMonkey`;
   }
   async updateNews(){
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=c357a62d5e0c44df9ef9c14307d18e69&page=${this.state.page}&pageSize=${this.props.pageSize}`;
@@ -55,7 +56,7 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin: '35px 0px;'}}>NewsMonkey - Top Headlines</h1>
+        <h1 className="text-center" style={{margin: '35px 0px;'}}>NewsMonkey - Top {this.props.category} Headlines</h1>
         {this.state.loading && <Spinner/>}    
         <div className="row">
         {!this.state.loading && this.state.articles.map((element)=>{
